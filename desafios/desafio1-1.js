@@ -2,9 +2,9 @@
     Cálculo de IMC
 ========================*/
 
-const nome = "Jefferson";
-const peso = 69;
-const altura = 1.75;
+const nome = "Juliana";
+const peso = 66;
+const altura = 1.63;
 const sexo = "M";
 
 const imc = peso / (altura * altura);
@@ -23,8 +23,8 @@ if (imc >= 30) {
 
 const nome2 = "Juliana";
 const sexo2 = "F";
-const idade = 60;
-const contribuicao = 25;
+const idade = 21;
+const contribuicao = 1;
 
 const idadeContribuicao = idade + contribuicao;
 
