@@ -73,7 +73,7 @@ conferirTrabalhaCss(teste);
 ==================================*/
 
 /**
- * ATENÇÃO!!! Para entender comece lendo a explicação da linha 122
+ * ATENÇÃO!!! Para entender comece lendo a explicação a partir da linha 128
  */
 
 const usuarios2 = [
