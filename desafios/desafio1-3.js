@@ -106,14 +106,14 @@ function calculaSaldo(receitas, despesas) {
 
     return somaReceitas - somaDespesas // Retorna o saldo entre 'receitas' - 'despesas'
     
-    // ATENÇÃO para finalizar o entendimento vá para a linha 126
+    // ATENÇÃO para finalizar o entendimento vá para a linha 132
 }
 
 function somaNumeros(numeros) { // Recebe o array '.receitas' (receitas: [115.3, 48.7, 98.3, 14.5])
     let soma = 0
 
     for (let n of numeros) { // Do array '.receitas' pega cada item por vez e joga na variável 'n' (ou seja, a cada rodada do looping 'n' é um valor diferente do array. No caso do array receitas: [115.3, 48.7, 98.3, 14.5] 'n' vai ser '115.3' na primeira rodada '48.7' na segunda e assim por diante até percorrer todo o array)
-        soma = soma + n // 'soma' (que recebeu 0 na linha 107), vai ser somada com o primeiro valor que 'n' foi transformado e isso é guardado em 'soma'
+        soma = soma + n // 'soma' (que recebeu 0 na linha 113), vai ser somada com o primeiro valor que 'n' foi transformado e isso é guardado em 'soma'
                         // Na proxima rodada do looping soma não é mais 0 pois recebeu o valor da rodada anterior. Ela então é somada novamente a 'n' que agora é outro valor pois em cada rodada do looping 'n' vai assumir o valor de uma posição do array '.receitas'
                         // Esse looping e essa soma vão ficar acontecendo até o 'n' ter passado em todas as posições do array '.receitas'
     }
@@ -122,14 +122,14 @@ function somaNumeros(numeros) { // Recebe o array '.receitas' (receitas: [115.3,
     
     return soma
     
-      // Esse processo vai ser do mesmo jeito com o array '.despesas' ATENÇÃO!!! vá para a linha 97 ver a função 'calculaSaldo'.
+      // Esse processo vai ser do mesmo jeito com o array '.despesas' ATENÇÃO!!! vá para a linha 103 ver a função 'calculaSaldo'.
 }
 
-for (let u of usuarios2) { // Do array 'usuarios2' o 'u' vai representar cada posição desse array. ATENÇÃO! Olhe o array 'usuarios2' e volte!. O array 'usuarios2' é um array que armazena objetos. Cada objeto é um usuário. O primeiro objeto é o de 'Savio' que tem 'receitas' e 'despesas'. O segundo objeto é o de 'Marcio' que tem 'receitas' e 'despesas' e assim por diante...
+for (let u of usuarios2) { // Do array 'usuarios2' o 'u' vai representar cada posição desse array. ATENÇÃO! Olhe o array 'usuarios2' que comeca na linha 79 e volte!. O array 'usuarios2' é um array que armazena objetos. Cada objeto é um usuário. O primeiro objeto é o de 'Savio' que tem 'receitas' e 'despesas'. O segundo objeto é o de 'Marcio' que tem 'receitas' e 'despesas' e assim por diante...
     
-    const saldo = calculaSaldo(u.receitas, u.despesas) // Na primeira rodada desse looping que estamos 'u' representa o objeto '0' que é o de Salvio, então 'u.receitas' e 'u.despesas' pegaria o array receitas (receitas: [115.3, 48.7, 98.3, 14.5]) e o array despesas (despesas: [85.3, 13.5, 19.9]) de Salvio. Porém se acompanharmos o codigo de cima pra baixo o array '.receitas' e o array '.despesas' são transformados de arrays em valores únicos pelas funções 'calculaSaldo' e 'somaNumeros'. ATENÇÃO!!! Vá para a linha 106 para continuar e entender a função 'somaNumeros'
+    const saldo = calculaSaldo(u.receitas, u.despesas) // Na primeira rodada desse looping que estamos 'u' representa o objeto '0' que é o de Salvio, então 'u.receitas' e 'u.despesas' pegaria o array receitas (receitas: [115.3, 48.7, 98.3, 14.5]) e o array despesas (despesas: [85.3, 13.5, 19.9]) de Salvio. Porém se acompanharmos o codigo de cima pra baixo o array '.receitas' e o array '.despesas' são transformados de arrays em valores únicos pelas funções 'calculaSaldo' e 'somaNumeros'. ATENÇÃO!!! Vá para a linha 112 para continuar e entender a função 'somaNumeros'
 
-    //Aqui em cima ^ (linha 124) temos saldo recebendo o resultado do processamento da função 'calculaSaldo' continuando olhe abaixo o final da explicação a partir da linha 128
+    //Aqui em cima ^ (linha 130) temos saldo recebendo o resultado do processamento da função 'calculaSaldo' continuando olhe abaixo o final da explicação a partir da linha 134
 
     if (saldo > 0) {
         console.log(`${u.nome} possui saldo positivo de ${saldo.toFixed(2)}`) // Tendo o valor saldo pra cada objeto(usuario) imprime em cada rodada do looping o nome de cada objeto e seu respectivo saldo
