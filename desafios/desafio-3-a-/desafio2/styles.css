@@ -1,0 +1,217 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+header {
+    margin: 0px;
+    padding: 30px;
+    border: 2px solid rgb(53, 53, 53);
+    background: #7159c1;
+;
+}
+header div {
+    text-align: center;
+}
+header div a {
+    font-size: 25px;
+    line-height: 35px;
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    text-shadow: 4px 4px 3px #000000;
+
+}
+header div a:hover {
+    text-shadow: -4px 4px 3px #000000;
+    transition: text-shadow 600ms;
+}
+main {
+    text-align: center;
+    margin: 30px auto;
+}
+main #wrapper img {
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+}
+main #wrapper h1 {
+    color: white;
+    font-size: 50px;
+}
+main #wrapper h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+main .list {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 30px;
+}
+main .list ul {
+    margin: auto;
+    width: 1000px;
+    height: 300px;
+    display: inline-block;
+    list-style: none;
+}
+main .list ul li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+}
+#img-js {
+    width: 100px;
+}
+
+#img-nd {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 113px;
+}
+#img-rc {
+    clip-path: polygon(50% 0%, 97.5% 25%, 97.5% 75%, 50% 100%, 3% 75%, 3% 25%);
+    width: 113px;
+}
+#img-rn {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 170px;
+}
+#img-tc {
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    width: 113px;
+}
+footer {
+    text-align: center;
+}
+footer ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+footer ul li a {
+    font-size: 16px;
+    color: #474646;
+}
+footer ul li a:hover {
+    color: #7159c1 /*#7d32f5*/;
+    transition: 500ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+    color: rgb(233, 232, 232);
+}
+
+/*=== CARDS ===*/
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.card {
+    background-color: rgba(37, 37, 37, 0.808);
+    border-radius: 25px;    
+}
+
+.card__image-container img {
+    width: 80%;
+    height: 80%;
+    padding: 50px 40px 30px 40px;
+    cursor: pointer;
+}
+
+#starter {
+    width: 65%;
+    height: 60%;
+    padding: 15px 40px 30px 45px;
+}
+
+#launchbase {
+    width: 100%;
+    height: 60%;
+    padding: 0px 40px 30px 0px;
+}
+
+#gostack {
+    width: 69%;
+    height: 60%;
+    padding: 0px 40px 30px 40px;
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__price {
+    background-color: rgb(8, 199, 119);
+    padding: 11px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/*=== MODAL ===*/
+
+.modal-overlay {
+    background-color: #7159c1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 3.5px;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+/*=== MODAL.ACTIVE ===*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 96%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
