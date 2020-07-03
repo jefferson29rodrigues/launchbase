@@ -114,6 +114,14 @@ footer ul li a:hover {
     color: rgb(233, 232, 232);
 }
 
+.error {
+    margin: 70px 390px 0px 100px;
+    background-color: #7159c1;
+    border-radius: 25px;
+    padding: 0px 0px 50px 50px;
+
+}
+
 /*=== CARDS ===*/
 
 .cards {

@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 3-1</title>
-    
-    <link rel="icon" href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-    <header>
-        <div>
-            <a href="/">Sobre</a>
-            <a href="/conteudo">Conteúdos</a>
-            <a href="https://discordapp.com/invite/gCRAFhc">Comunidade</a>
-            <a href="mailto:oi@rocketseat.com.br?subject=Assunto">Email</a>
-            <a href="tel:+5547992078767">Telefone</a>
-        </div>
-        
-    </header>
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Rocketseat - Sobre</title>
+
+{% endblock %}
+
+{% block content %}
+
     <main>
         <div id="wrapper">
             <img src="data:image/png;base64,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" alt="logo-rocketseat">
@@ -57,5 +45,5 @@
             <li><a href="https://www.facebook.com/rocketseat">Facebook</a></li>            
         </ul>
     </footer>
-</body>
-</html>
+
+{% endblock %}
