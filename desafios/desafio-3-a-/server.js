@@ -15,6 +15,10 @@ server.get("/", function(req, res) {
     return res.render('index');
 });
 
+server.get("/conteudo", function(req, res) {
+    return res.render('conteudo');
+});
+
 server.listen(5000, function() {
     console.log("Servidor rodando!")
 });
