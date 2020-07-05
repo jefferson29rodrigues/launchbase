@@ -12,44 +12,23 @@
         <h1>Cursos</h1>
     </div>
     <section class="cards">
-        <div class="card" id="-VQPimwkstM">
+        
+        {% for curso in items %}
+
+        <div class="card" id="{{ curso.id }}">
             <div class="card__image-container" id="starter">
-                <img src="https://skylab.rocketseat.com.br/static/media/Starter.64c237cc.svg" alt="curso-starter">
+                <img src="https://skylab.rocketseat.com.br/static/media/{{ curso.img }}.svg" alt="curso-starter">
             </div>
             <div class="card__content">
-                <p>Curso Starter para impulsionar seu ponto de partida!</p>
+                <p>{{ curso.title }}</p>
             </div>
             <div class="card__info">
-                <p>50 horas</p>
-                <p class="card__price">Grátis</p>
+                <p>{{ curso.duration }}</p>
+                <p class="card__price">{{ curso.price }}</p>
             </div>
-        </div>
+        </div>        
 
-        <div class="card" id="U7GjS3FuSkA">
-            <div class="card__image-container" id="launchbase">
-                <img src="https://skylab.rocketseat.com.br/static/media/LaunchBase.08285320.svg" alt="curso-launchbase">
-            </div>
-            <div class="card__content">
-                <p>Seja Programador Júnior!</p>
-            </div>
-            <div class="card__info">
-                <p>250 horas</p>
-                <p class="card__price">1.000,00</p>
-            </div>
-        </div>
-
-        <div class="card" id="SXSKvUB9wDA">
-            <div class="card__image-container" id="gostack">
-                <img src="https://skylab.rocketseat.com.br/static/media/GoStack.83a178a0.svg" alt="curso-gostack">
-            </div>
-            <div class="card__content">
-                <p>Seja desejado pelas empresas!</p>
-            </div>
-            <div class="card__info">
-                <p>300 horas</p>
-                <p class="card__price">3.000,00</p>
-            </div>
-        </div>
+        {% endfor %}
 
     </section>
 
