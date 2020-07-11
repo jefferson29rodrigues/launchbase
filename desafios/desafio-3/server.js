@@ -17,11 +17,21 @@ server.get("/", function(req, res) {
 });
 
 server.get("/courses", function(req, res) {
-    return res.render('courses', { items: cursos });
+     return res.render('courses', { items: cursos });
 });
 
 server.get("/description", function(req, res) {
-    return res.send("Hello página de descrição!");
+    const id = req.query.id;
+
+    const curso = cursos.find(function(curso) {
+        return curso.id == id;
+    });
+
+    if ( !curso ) {
+        return res.send("curso not found!");
+    };
+
+    return res.render("description", { item: curso });
 });
 
 server.use(function(req, res) {

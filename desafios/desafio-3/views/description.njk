@@ -3,26 +3,26 @@
 {% block head %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <title>Rocketseat - Cursos</title>
+    <title>Rocketseat - q{{ item.title }}</title>
 {% endblock %}
 
 {% block content %}
 
     <div id="wrapper">
-        <h1>Cursos</h1>
+        <h1>{{ item.title }}</h1>
     </div>
     <section class="cards">
         
-        <div class="card" id="{{ curso.id }}">
-            <div class="card__image-container" id="starter">
-                <img src="https://skylab.rocketseat.com.br/static/media/{{ curso.img }}.svg" alt="curso-starter">
+        <div class="card" id="{{ item.id }}">
+            <div class="card__description-container" id="starter">
+                <iframe src="https://www.youtube.com/embed/{{ item.id }}" frameborder="0"></iframe>
             </div>
             <div class="card__content">
-                <p>{{ curso.title }}</p>
+                <p>{{ item.title }}</p>
             </div>
             <div class="card__info">
-                <p>{{ curso.duration }}</p>
-                <p class="card__price">{{ curso.price }}</p>
+                <p>{{ item.duration }}</p>
+                <p class="card__price">{{ item.price }}</p>
             </div>
         </div>        
 
