@@ -20,8 +20,8 @@ server.get("/courses", function(req, res) {
      return res.render('courses', { items: cursos });
 });
 
-server.get("/description", function(req, res) {
-    const id = req.query.id;
+server.get("/description/:id", function(req, res) {
+    const id = req.params.id;
 
     const curso = cursos.find(function(curso) {
         return curso.id == id;
