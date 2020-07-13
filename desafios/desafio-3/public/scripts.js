@@ -40,6 +40,7 @@ for (let card of cards) {
     card.addEventListener("click", function(){
         const cursoId = card.getAttribute("id");
         
+    /*  window.location.href = `/description?id=${ cursoId }`; */
         window.location.href = `/description?id=${ cursoId }`;
     })
 }
